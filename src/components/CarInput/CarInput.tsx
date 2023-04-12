@@ -5,6 +5,8 @@ const CarInput = () => {
     <div>
       <input type="text" aria-label="make" />;
       <input type="text" aria-label="model" />;
+      <input type="text" aria-label="color" />;
+      <input type="text" aria-label="car-url" />;
     </div>
   );
 };

@@ -17,4 +17,20 @@ describe("Given a make form", () => {
 
     expect(modelInput).toBeInTheDocument();
   });
+
+  test("When a user types the color of a car, it will show on screen", () => {
+    render(<CarInput />);
+
+    let modelInput = screen.getByLabelText("color");
+
+    expect(modelInput).toBeInTheDocument();
+  });
+
+  test("When a user pastes the URL of an image of a car, it will show on screen", () => {
+    render(<CarInput />);
+
+    let modelInput = screen.getByLabelText("car-url");
+
+    expect(modelInput).toBeInTheDocument();
+  });
 });
