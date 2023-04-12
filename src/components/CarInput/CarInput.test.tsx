@@ -5,9 +5,9 @@ import CarInput from "./CarInput";
 describe("Given a make form", () => {
   test("When a user types BMW into the form it will show on screen", () => {
     render(<CarInput />);
-    let manufacturerInput = screen.getByLabelText("make");
+    let makeInput = screen.getByLabelText("make");
 
-    expect(manufacturerInput).toBeInTheDocument();
+    expect(makeInput).toBeInTheDocument();
   });
 
   test("When a user types the model of the car, it will show on the screen", () => {
@@ -21,16 +21,24 @@ describe("Given a make form", () => {
   test("When a user types the color of a car, it will show on screen", () => {
     render(<CarInput />);
 
-    let modelInput = screen.getByLabelText("color");
+    let colorInput = screen.getByLabelText("color");
 
-    expect(modelInput).toBeInTheDocument();
+    expect(colorInput).toBeInTheDocument();
   });
 
   test("When a user pastes the URL of an image of a car, it will show on screen", () => {
     render(<CarInput />);
 
-    let modelInput = screen.getByLabelText("car-url");
+    let carUrl = screen.getByLabelText("car-url");
 
-    expect(modelInput).toBeInTheDocument();
+    expect(carUrl).toBeInTheDocument();
+  });
+
+  test("When a user completes the car input form and presses submit, it will show submit button", () => {
+    render(<CarInput />);
+
+    let carSubmit = screen.getByRole("button");
+
+    expect(carSubmit).toBeInTheDocument();
   });
 });
